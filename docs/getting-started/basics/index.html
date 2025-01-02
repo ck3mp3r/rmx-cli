@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="preload" as="font" href="https://laio.sh/fonts/vendor/jost/jost-v4-latin-regular.woff2" type="font/woff2" crossorigin>
+  <link rel="preload" as="font" href="https://laio.sh/fonts/vendor/jost/jost-v4-latin-700.woff2"  type="font/woff2" crossorigin>
+
+
+<link rel="stylesheet" href="https://laio.sh/main.css">
+
+
+
+  
+  
+    
+  
+
+  
+  
+    
+    
+  
+  
+  
+    
+  
+  
+  
+  
+    
+  
+  
+  
+
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+  <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+
+
+	
+
+
+	
+
+<title>Basics | laio</title>
+<meta name="description" content="Basic laio.">
+<link rel="canonical" href="https://laio.sh/docs/getting-started/basics/">
+
+
+
+
+
+
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "BreadcrumbList",
+    
+      
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          {
+            "@type": "ListItem",
+            "position":  1 ,
+            "name": "Home",
+            "item": "https://laio.sh/"
+          },
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  2 ,
+            "name": "Docs",
+            "item": "https://laio.sh/docs/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  3 ,
+            "name": "Getting Started",
+            "item": "https://laio.sh/docs/getting-started/"
+          },
+        
+      
+        
+        
+        
+        
+        
+        
+        
+        
+          
+          
+          {
+            "@type": "ListItem",
+            "position":  4 ,
+            "name": "Basics",
+            "item": "https://laio.sh/docs/getting-started/basics/"
+          },
+        
+      
+    
+  }
+</script>
+
+
+
+
+
+
+  <meta name="theme-color" content="#fff">
+  <link rel="apple-touch-icon" sizes="180x180" href="https://laio.sh/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="https://laio.sh/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="https://laio.sh/favicon-16x16.png">
+  
+    <link rel="manifest" href="https://laio.sh/site.webmanifest" crossorigin>
+  
+
+
+  
+
+</head>
+
+  
+
+<body class="docs single">
+  
+  
+  
+  
+<div class="header-bar fixed-top"></div>
+<header class="navbar fixed-top navbar-expand-md navbar-light">
+	<div class="container">
+		<input class="menu-btn order-0" type="checkbox" id="menu-btn">
+		<label class="menu-icon d-md-none" for="menu-btn"><span class="navicon"></span></label>
+		<a class="navbar-brand order-1 order-md-0 me-auto" href="https://laio.sh">laio</a>
+		<button id="mode" class="btn btn-link order-2 order-md-4" type="button" aria-label="Toggle mode">
+			<span class="toggle-dark"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg></span>
+			<span class="toggle-light"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg></span>
+		</button>
+		<ul class="navbar-nav fork-me order-3 order-md-5">
+			
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://toot.io/@ckemper"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-mastodon" viewBox="0 0 16 16"><path d="M11.19 12.195c2.016-.24 3.77-1.475 3.99-2.603.348-1.778.32-4.339.32-4.339 0-3.47-2.286-4.488-2.286-4.488C12.062.238 10.083.017 8.027 0h-.05C5.92.017 3.942.238 2.79.765c0 0-2.285 1.017-2.285 4.488l-.002.662c-.004.64-.007 1.35.011 2.091.083 3.394.626 6.74 3.78 7.57 1.454.383 2.703.463 3.709.408 1.823-.1 2.847-.647 2.847-.647l-.06-1.317s-1.303.41-2.767.36c-1.45-.05-2.98-.156-3.215-1.928a3.614 3.614 0 0 1-.033-.496s1.424.346 3.228.428c1.103.05 2.137-.064 3.188-.189zm1.613-2.47H11.13v-4.08c0-.859-.364-1.295-1.091-1.295-.804 0-1.207.517-1.207 1.541v2.233H7.168V5.89c0-1.024-.403-1.541-1.207-1.541-.727 0-1.091.436-1.091 1.296v4.079H3.197V5.522c0-.859.22-1.541.66-2.046.456-.505 1.052-.764 1.793-.764.856 0 1.504.328 1.933.983L8 4.39l.417-.695c.429-.655 1.077-.983 1.934-.983.74 0 1.336.259 1.791.764.442.505.661 1.187.661 2.046v4.203z"/></svg><span class="ms-2 visually-hidden">Mastodon</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://twitter.com/ck3mp3r"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-twitter"><path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path></svg><span class="ms-2 visually-hidden">Twitter</span></a>
+					</li>
+				
+					<li class="nav-item">
+						<a class="nav-link" href="https://github.com/ck3mp3r/laio-cli"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-github"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg><span class="ms-2 visually-hidden">GitHub</span></a>
+					</li>
+				
+			
+		</ul>
+		<div class="collapse navbar-collapse order-4 order-md-1">
+			<ul class="navbar-nav main-nav me-auto order-5 order-md-2">
+				
+					
+				
+				
+				
+					
+						<li class="nav-item docs active">
+							<a class="nav-link" href="https://laio.sh/docs/getting-started/installing/">Docs</a>
+						</li>
+					
+				
+			</ul>
+			<div class="break order-6 d-md-none"></div>
+			
+				<form class="navbar-form flex-grow-1 order-7 order-md-3">
+					<input id="userinput" class="form-control is-search" type="search" placeholder="Search docs..."
+						aria-label="Search docs..." autocomplete="off">
+					<div id="suggestions" class="shadow bg-white rounded"></div>
+				</form>
+			
+		</div>
+	</div>
+</header>
+
+
+
+  
+<div class="wrap container" role="document">
+  <div class="content">
+    <div class="row flex-xl-nowrap">
+	  
+<div class="col-lg-5 col-xl-4 docs-sidebar">
+	<nav class="docs-links" aria-label="Main navigation">
+			
+			
+			
+			
+					
+					
+					
+							<h3>Getting Started</h3>
+							<ul class="list-unstyled">
+							                           
+									<li><a class="docs-link" href="https://laio.sh/docs/getting-started/installing/">Installing</a></li>
+							                           
+									<li><a class="docs-link active" href="https://laio.sh/docs/getting-started/basics/">Basics</a></li>
+							                           
+									<li><a class="docs-link" href="https://laio.sh/docs/getting-started/advanced/">Advanced</a></li>
+							
+					</ul>
+					
+					
+			
+	</nav>
+</div>
+
+	  
+  
+  <nav class="docs-toc d-none d-xl-block col-xl-3" aria-label="Secondary navigation">
+  	<div class="page-links">
+  			<h3>On this page</h3>
+  			<nav id="TableOfContents">
+  					<ul>
+  							
+  							<li><a href="https://laio.sh/docs/getting-started/basics/#using-laio">Using laio</a></li>
+  							
+  							
+  							<li><a href="https://laio.sh/docs/getting-started/basics/#creating-a-configuration">Creating a Configuration</a></li>
+  							
+  							
+  							<li><a href="https://laio.sh/docs/getting-started/basics/#starting-a-session">Starting a Session</a></li>
+  							
+  							
+  							<li><a href="https://laio.sh/docs/getting-started/basics/#configuration-yaml">Configuration YAML</a></li>
+  							
+  							
+  							<li><a href="https://laio.sh/docs/getting-started/basics/#completion">Completion</a></li>
+  							
+  							
+  							<li><a href="https://laio.sh/docs/getting-started/basics/#known-limitations">Known Limitations</a></li>
+  							
+  							
+  					</ul>
+  			</nav>
+  	</div>
+  </nav>
+  
+
+      <main class="docs-content col-lg-11 col-xl-9">
+        <h1>Basics</h1>
+        
+        <h2 id="using-laio">Using laio</h2>
+<p>Once you have <code>laio</code> on your path simply running it will output the options available:</p>
+<pre style="background-color:#2b303b;color:#c0c5ce;"><code><span>A simple flexbox-like layout manager for tmux.
+</span><span>
+</span><span>Usage: laio [OPTIONS] &lt;COMMAND&gt;
+</span><span>
+</span><span>Commands:
+</span><span>  start       Start new session
+</span><span>  stop        Stop session
+</span><span>  list        List active (*) and available sessions
+</span><span>  config      Manage Configurations
+</span><span>  session     Manage Sessions
+</span><span>  completion  Display the completion file for a given shell
+</span><span>  help        Print this message or the help of the given subcommand(s)
+</span><span>
+</span><span>Options:
+</span><span>      --config-dir &lt;CONFIG_DIR&gt;  [default: ~/.config/laio]
+</span><span>  -v, --verbose...               Increase logging verbosity
+</span><span>  -q, --quiet...                 Decrease logging verbosity
+</span><span>  -h, --help                     Print help
+</span><span>  -V, --version                  Print version
+</span><span>
+</span></code></pre>
+<h2 id="creating-a-configuration">Creating a Configuration</h2>
+<p>Using laio requires a configuration that describes the kind of tmux session you want. Config files are usually stored in <code>~/.config/laio</code>.
+You can also have config files inside project directories named <code>.laio.yaml</code>.</p>
+<p>To create a new configuration run</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">laio</span><span> config create &lt;name-of-config&gt;
+</span></code></pre>
+<p>This will create a new config with the same session name.
+The config is a default 2 window session with the first window being dedicated for <code>$EDITOR</code> and the second window consisting of two vertically split panes.</p>
+<h2 id="starting-a-session">Starting a Session</h2>
+<p>To start a session from an existing config run</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">laio</span><span> start &lt;name-of-config&gt;
+</span></code></pre>
+<p>Alternatively, if you omit the config name, you will be presented with a list of known configurations, unless there is a <code>.laio.yaml</code> present.</p>
+<p><em>Note: if the local config cannot be found in the current directory, it will search up the path until reaching the users home directory.</em></p>
+<p>If you want to skip the local laio config and use the picker to select then run:</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">laio</span><span> start</span><span style="color:#bf616a;"> -p
+</span></code></pre>
+<h2 id="configuration-yaml">Configuration YAML</h2>
+<p>A simple yaml configuration looks as follows:</p>
+<pre data-lang="yaml" style="background-color:#2b303b;color:#c0c5ce;" class="language-yaml "><code class="language-yaml" data-lang="yaml"><span>---
+</span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">myproject
+</span><span>
+</span><span style="color:#bf616a;">path</span><span>: </span><span style="color:#a3be8c;">/path/to/myproject
+</span><span style="color:#bf616a;">startup</span><span>: </span><span style="color:#65737e;"># a list of startup commands to run
+</span><span>  - </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">gh
+</span><span>    </span><span style="color:#bf616a;">args</span><span>:
+</span><span>      - </span><span style="color:#a3be8c;">auth
+</span><span>      - </span><span style="color:#a3be8c;">login
+</span><span>
+</span><span style="color:#bf616a;">shutdown</span><span>: </span><span style="color:#65737e;"># a list of shutdown commands to run
+</span><span>  - </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">echo
+</span><span>    </span><span style="color:#bf616a;">args</span><span>:
+</span><span>      - &quot;</span><span style="color:#a3be8c;">Bye bye!</span><span>&quot;
+</span><span>
+</span><span style="color:#bf616a;">windows</span><span>:
+</span><span>  - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">code
+</span><span>    </span><span style="color:#bf616a;">panes</span><span>:
+</span><span>      - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">Editor
+</span><span>        </span><span style="color:#bf616a;">commands</span><span>: </span><span style="color:#65737e;"># starting up system editor in this pane
+</span><span>          - </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">$EDITOR
+</span><span>
+</span><span>  - </span><span style="color:#bf616a;">name</span><span>: </span><span style="color:#a3be8c;">local
+</span><span>    </span><span style="color:#bf616a;">flex_direction</span><span>: </span><span style="color:#a3be8c;">row </span><span style="color:#65737e;"># splits are vertical, panes are side by side
+</span><span>    </span><span style="color:#bf616a;">panes</span><span>:
+</span><span>      - </span><span style="color:#bf616a;">flex</span><span>: </span><span style="color:#d08770;">1 </span><span style="color:#65737e;"># what proportion of the window to occupy in relation to the other splits
+</span><span>        </span><span style="color:#bf616a;">flex_direction</span><span>: </span><span style="color:#a3be8c;">column </span><span style="color:#65737e;"># splits are horizontal, panes are on top of each other
+</span><span>        </span><span style="color:#bf616a;">panes</span><span>:
+</span><span>          - </span><span style="color:#bf616a;">flex</span><span>: </span><span style="color:#d08770;">1
+</span><span>            </span><span style="color:#bf616a;">path</span><span>: </span><span style="color:#a3be8c;">./foo </span><span style="color:#65737e;"># path relative to the root path declared above
+</span><span>            </span><span style="color:#bf616a;">style</span><span>: </span><span style="color:#a3be8c;">bg=darkred,fg=default </span><span style="color:#65737e;"># specify pane styles as per tmux options
+</span><span>            </span><span style="color:#bf616a;">commands</span><span>:
+</span><span>              - </span><span style="color:#bf616a;">command</span><span>: </span><span style="color:#a3be8c;">colima
+</span><span>                </span><span style="color:#bf616a;">args</span><span>:
+</span><span>                  - </span><span style="color:#a3be8c;">start
+</span><span>                  - </span><span style="color:#a3be8c;">--kubernetes
+</span><span>                  - </span><span style="color:#a3be8c;">--kubernetes-version
+</span><span>                  - &quot;</span><span style="color:#a3be8c;">v1.25.11+k3s1</span><span>&quot;
+</span><span>                  - </span><span style="color:#a3be8c;">--cpu 6
+</span><span>                  - </span><span style="color:#a3be8c;">--memory 24
+</span><span>          - </span><span style="color:#bf616a;">flex</span><span>: </span><span style="color:#d08770;">6
+</span><span>      - </span><span style="color:#bf616a;">flex</span><span>: </span><span style="color:#d08770;">1
+</span></code></pre>
+<h2 id="completion">Completion</h2>
+<p>To generate the right shell completion for your shell run</p>
+<pre data-lang="bash" style="background-color:#2b303b;color:#c0c5ce;" class="language-bash "><code class="language-bash" data-lang="bash"><span style="color:#bf616a;">laio</span><span> completion &lt;your-shell&gt;
+</span></code></pre>
+<h2 id="known-limitations">Known Limitations</h2>
+<p>Currently there is a known limitation to the number of nested panes allowed.
+Play around with the configurations to see what works best for you.</p>
+
+        
+        
+<div class="docs-navigation d-flex justify-content-between">
+  
+  
+  
+  
+  
+    
+    
+    
+    
+      
+    
+  
+
+  
+  
+  
+  
+  
+    
+    
+    
+      
+      
+        
+      
+    
+  
+</div>
+
+      </main>
+    </div>
+  </div>
+</div>
+
+
+  
+    
+<footer class="footer text-muted">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8 order-last order-lg-first">
+				<ul class="list-inline">
+					
+						<li class="list-inline-item"> </li>
+					
+				</ul>
+			</div>
+			<div class="col-lg-8 order-first order-lg-last text-lg-end">
+				<ul class="list-inline">
+					
+				</ul>
+			</div>
+		</div>
+	</div>
+</footer>
+
+  
+
+  
+<script type="text/javascript" src="https://laio.sh/js/main.js" defer></script>
+
+  <script type="text/javascript" src="https://laio.sh/plugins/elasticlunr.min.js" defer></script>
+  <script type="text/javascript" src="https://laio.sh/search_index.en.js" defer></script>
+  <script type="text/javascript" src="https://laio.sh/js/search.js" defer></script>
+
+  
+</body>
+</html>

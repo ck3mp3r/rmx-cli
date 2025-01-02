@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+        <loc>https://laio.sh/</loc>
+    </url>
+    <url>
+        <loc>https://laio.sh/docs/</loc>
+    </url>
+    <url>
+        <loc>https://laio.sh/docs/getting-started/</loc>
+    </url>
+    <url>
+        <loc>https://laio.sh/docs/getting-started/advanced/</loc>
+    </url>
+    <url>
+        <loc>https://laio.sh/docs/getting-started/basics/</loc>
+    </url>
+    <url>
+        <loc>https://laio.sh/docs/getting-started/installing/</loc>
+    </url>
+</urlset>
